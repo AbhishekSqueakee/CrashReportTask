@@ -1,6 +1,9 @@
-package com.crashreportproject
+package com.crashreportproject.app
 
 import android.app.Application
+import com.crashreportproject.BuildConfig
+import com.crashreportproject.activities.CrashActivity
+import com.crashreportproject.handler.GlobalExceptionHandler
 import com.facebook.react.PackageList
 import com.facebook.react.ReactApplication
 import com.facebook.react.ReactHost
@@ -40,5 +43,7 @@ class MainApplication : Application(), ReactApplication {
       // If you opted-in for the New Architecture, we load the native entry point for this app.
       load()
     }
+      // this is to initialize the global exception handler
+      GlobalExceptionHandler.init(this, CrashActivity::class.java)
   }
 }

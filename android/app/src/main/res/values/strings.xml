@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">CrashReportProject</string>
+    <string name="crash_handler_failed">Crash handler failed</string>
+    <string name="global_exception_handler">GlobalExceptionHandler</string>
+    <string name="unknown_error">Unknown error</string>
+    <string name="app_crashed_with_error">App crashed with error:\n\n%1$s</string>
+    <string name="hide_crash_report">Hide Crash Report</string>
+    <string name="expand_crash_report">Expand Crash Report</string>
+    <string name="app_crashed_with_error_click_expand_to_view_details">App crashed with error:\n\nClick \'Expand\' to view details.</string>
+    <string name="crash_report_from_myapp">Crash Report from MyApp</string>
+    <string name="send_crash_report_via">Send Crash Report via…</string>
 </resources>

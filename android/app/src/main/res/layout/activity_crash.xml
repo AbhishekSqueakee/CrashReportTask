@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="32dp"
+    android:padding="16dp">
+
+    <!-- Title Text -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Oops! The app crashed."
+        android:textSize="24sp"
+        android:textColor="#FF0000"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Button to expand/collapse -->
+    <Button
+        android:id="@+id/expand_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Expand Crash Report"
+        android:layout_below="@id/title"/>
+
+    <Button
+        android:id="@+id/share_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Share Crash Report"
+        android:layout_below="@id/expand_button"/>
+
+    <!-- Scroll View for Crash Report -->
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/share_button"
+        android:visibility="gone"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:id="@+id/crash_report_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="App crashed with error:\n\nClick 'Expand' to view details."
+            android:textSize="16sp"
+            android:textColor="#333333"
+            android:padding="12dp"/>
+
+    </ScrollView>
+</RelativeLayout>

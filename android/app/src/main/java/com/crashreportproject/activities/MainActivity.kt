@@ -1,4 +1,4 @@
-package com.crashreportproject
+package com.crashreportproject.activities
 
 import com.facebook.react.ReactActivity
 import com.facebook.react.ReactActivityDelegate
