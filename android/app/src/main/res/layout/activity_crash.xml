@@ -16,27 +16,36 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="16dp"/>
 
+    <!-- Button to share crash report -->
+    <Button
+        android:id="@+id/share_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/share_crash_report"
+        android:layout_below="@id/title"/>
+
+    <!-- Button to share crash report -->
+    <Button
+        android:id="@+id/kill_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/kill_app"
+        android:layout_below="@id/share_button"/>
+
     <!-- Button to expand/collapse -->
     <Button
         android:id="@+id/expand_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Expand Crash Report"
-        android:layout_below="@id/title"/>
-
-    <Button
-        android:id="@+id/share_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Share Crash Report"
-        android:layout_below="@id/expand_button"/>
+        android:text="@string/expand_crash_report"
+        android:layout_below="@id/kill_button"/>
 
     <!-- Scroll View for Crash Report -->
     <ScrollView
         android:id="@+id/scroll_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/share_button"
+        android:layout_below="@id/expand_button"
         android:visibility="gone"
         android:layout_marginTop="16dp">
 
@@ -44,7 +53,7 @@
             android:id="@+id/crash_report_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="App crashed with error:\n\nClick 'Expand' to view details."
+            android:text="@string/app_crashed_with_error_click_expand_to_view_details"
             android:textSize="16sp"
             android:textColor="#333333"
             android:padding="12dp"/>

@@ -11,12 +11,14 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isGone
 import com.crashreportproject.R
+import kotlin.system.exitProcess
 
 class CrashActivity : AppCompatActivity(), OnClickListener{
     private lateinit var crashInfo: String
     private lateinit var crashReportTextView: TextView
     private lateinit var expandButton: Button
     private lateinit var shareButton: Button
+    private lateinit var killButton: Button
     private lateinit var scrollView: ScrollView
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,9 +33,11 @@ class CrashActivity : AppCompatActivity(), OnClickListener{
         crashReportTextView = findViewById(R.id.crash_report_text)
         expandButton = findViewById(R.id.expand_button)
         shareButton = findViewById(R.id.share_button)
+        killButton = findViewById(R.id.kill_button)
         scrollView = findViewById(R.id.scroll_view)
         shareButton.setOnClickListener(this)
         expandButton.setOnClickListener(this)
+        killButton.setOnClickListener(this)
     }
 
     // This method is used to share the crash report
@@ -68,6 +72,15 @@ class CrashActivity : AppCompatActivity(), OnClickListener{
                 // Handle share button click
                 shareCrashReport(this, crashInfo)
             }
+            R.id.kill_button -> {
+                // Handle kill button click
+                killApp()
+            }
         }
+    }
+
+    private fun killApp() {
+        finishAffinity()
+        exitProcess(0)
     }
 }
